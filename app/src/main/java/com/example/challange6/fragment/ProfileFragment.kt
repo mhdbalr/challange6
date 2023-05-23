@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.Navigation
 import com.example.challange6.R
+import com.example.challange6.databinding.FragmentProfileBinding
 import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -17,14 +18,13 @@ import dagger.hilt.android.AndroidEntryPoint
 class ProfileFragment : Fragment() {
 
     lateinit var binding: FragmentProfileBinding
-    lateinit var sharedpref : SharedPreferences
-    lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var sharedpref : SharedPreferences
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
         binding = FragmentProfileBinding.inflate(layoutInflater,container,false)
         return binding.root
     }
@@ -32,6 +32,9 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         sharedpref = requireActivity().getSharedPreferences("dataregistrasi", Context.MODE_PRIVATE)
+
+        val getUser = sharedpref.getString("username", "")
+        binding.updateUsername.setText(getUser)
 
 
         binding.btnUpdate.setOnClickListener {
@@ -42,19 +45,18 @@ class ProfileFragment : Fragment() {
             upusername.apply()
             firebaseAuth = FirebaseAuth.getInstance()
             firebaseAuth.signOut()
-            Toast.makeText(context, "Update Data Berhasil", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Success Update Data", Toast.LENGTH_SHORT).show()
             Navigation.findNavController(binding.root).navigate(R.id.action_profileFragment_to_homeFragment)
         }
 
         binding.btnLogout.setOnClickListener {
             firebaseAuth = FirebaseAuth.getInstance()
             firebaseAuth.signOut()
-            Toast.makeText(context, "Berhasil Logout", Toast.LENGTH_SHORT).show()
+            val addUser = sharedpref.edit()
+            addUser.apply()
+            Toast.makeText(context, "Logout Success", Toast.LENGTH_SHORT).show()
             Navigation.findNavController(binding.root).navigate(R.id.action_profileFragment_to_loginFragment)
         }
-
-
-
 
     }
 

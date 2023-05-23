@@ -1,19 +1,20 @@
 package com.example.challange6.adapter
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.challange6.R
 import com.example.challange6.databinding.ItemMovieBinding
 import com.example.challange6.model.Movie
 
-class MovieAdapter(var listMovie : List<Result>): RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
+@Suppress("unused", "unused", "unused", "CanBeVal", "CanBeVal")
+class MovieAdapter(private var listMovie : List<com.example.challange6.model.Result>): RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
 
-    class ViewHolder (var binding : ItemMovieBinding): RecyclerView.ViewHolder(binding.root) {
-
-    }
+    class ViewHolder (var binding : ItemMovieBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         var view = ItemMovieBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -52,7 +53,8 @@ class MovieAdapter(var listMovie : List<Result>): RecyclerView.Adapter<MovieAdap
         return listMovie.size
     }
 
-    fun setDataMovie(list : List<Result>){
+    @SuppressLint("NotifyDataSetChanged")
+    fun setDataMovie(list : List<com.example.challange6.model.Result>){
         listMovie = list
         notifyDataSetChanged()
     }

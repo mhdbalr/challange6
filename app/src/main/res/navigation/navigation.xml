@@ -31,12 +31,20 @@
         android:id="@+id/detailFragment"
         android:name="com.example.challange6.fragment.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_favoritFragment"
+            app:destination="@id/favoritFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoritFragment"
         android:name="com.example.challange6.fragment.FavoritFragment"
         android:label="fragment_favorit"
-        tools:layout="@layout/fragment_favorit" />
+        tools:layout="@layout/fragment_favorit" >
+        <action
+            android:id="@+id/action_favoritFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.challange6.fragment.HomeFragment"

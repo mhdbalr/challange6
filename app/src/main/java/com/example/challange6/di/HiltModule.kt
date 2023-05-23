@@ -23,6 +23,7 @@ class HiltModule {
 
     @Singleton
     @Provides
-    fun provideFavoriteDao(database:FavoritDatabase): FavoritDao {
+    fun provideFavoriteDao(database: FavoritDatabase): FavoritDao {
         return database.favoritDao()
     }
+}

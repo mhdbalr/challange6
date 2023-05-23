@@ -11,13 +11,16 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.challange6.R
+import com.example.challange6.adapter.MovieAdapter
+import com.example.challange6.databinding.FragmentHomeBinding
+import com.example.challange6.viewmodel.MovieViewModel
 import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
-    lateinit var shredPref : SharedPreferences
+    private lateinit var shredPref : SharedPreferences
     private lateinit var movieAdapter: MovieAdapter
     private lateinit var movieViewModel : MovieViewModel
     private lateinit var firebaseAuth: FirebaseAuth
@@ -25,9 +28,9 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
-        // Inflate the layout for this fragment
+
         return binding.root
     }
 

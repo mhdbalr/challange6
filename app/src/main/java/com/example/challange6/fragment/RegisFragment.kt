@@ -10,18 +10,20 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.challange6.R
+import com.example.challange6.databinding.FragmentRegisBinding
 import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
 
-AndroidEntryPoint
+@AndroidEntryPoint
 class RegisFragment : Fragment() {
     lateinit var binding: FragmentRegisBinding
     private lateinit var firebaseAuth: FirebaseAuth
-    lateinit var pref : SharedPreferences
+    private lateinit var pref : SharedPreferences
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentRegisBinding.inflate(layoutInflater, container, false)
         return binding.root
