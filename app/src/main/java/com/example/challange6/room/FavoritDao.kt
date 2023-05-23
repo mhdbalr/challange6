@@ -5,17 +5,17 @@ import androidx.room.Insert
 import androidx.room.Query
 
 interface FavoritDao {
-    @Query("SELECT * FROM FavNote")
-fun getAllMovieFavorit() : List<FavNote>
+    @Query("SELECT * FROM FavoritNote")
+fun getAllMovieFavorit() : List<FavoritNote>
 
 //    @Insert
 //    suspend fun insertFilmFavorites(filmFavorites: FavNote)
 
     @Insert
-    suspend fun addToFavorit(favoritMovie : FavNote) : Long
-    @Query("SELECT count(*) FROM FavNote WHERE FavNote.id = :id")
+    suspend fun addToFavorit(favoritMovie : FavoritNote) : Long
+    @Query("SELECT count(*) FROM FavoritNote WHERE FavoritNote.id = :id")
     fun checkMovie(id: Int) : Int
     @Delete
-    suspend fun deleteFilmFavorit(filmFavorites: FavNote) : Int
+    suspend fun deleteFilmFavorit(filmFavorites: FavoritNote) : Int
 
 }

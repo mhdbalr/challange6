@@ -11,7 +11,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="@color/grey"
+        android:background="@color/white"
         android:padding="10dp"
         android:layout_height="wrap_content">
 
@@ -23,7 +23,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/movie" />
+            tools:src="@drawable/logofilm" />
 
         <LinearLayout
             android:layout_width="285dp"

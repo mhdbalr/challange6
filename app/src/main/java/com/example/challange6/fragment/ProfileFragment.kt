@@ -40,7 +40,7 @@ class ProfileFragment : Fragment() {
         binding.btnUpdate.setOnClickListener {
             val username = binding.updateUsername.text.toString()
 
-            var upusername = sharedpref.edit()
+            val upusername = sharedpref.edit()
             upusername.putString("username", username)
             upusername.apply()
             firebaseAuth = FirebaseAuth.getInstance()

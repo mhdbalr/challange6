@@ -1,5 +1,6 @@
 package com.example.challange6.fragment
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,6 +19,7 @@ import com.example.challange6.viewmodel.MovieViewModel
 import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
 
+@Suppress("RedundantSamConstructor")
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
@@ -34,11 +37,12 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         movieAdapter = MovieAdapter(ArrayList())
-        movieViewModel = ViewModelProvider(this).get(MovieViewModel::class.java)
+        movieViewModel = ViewModelProvider(this)[MovieViewModel::class.java]
 
         firebaseAuth = FirebaseAuth.getInstance()
 

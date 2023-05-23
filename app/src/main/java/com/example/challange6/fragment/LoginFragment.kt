@@ -1,4 +1,4 @@
-package com.example.challengeenam.fragment
+package com.example.challange6.fragment
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -53,7 +53,7 @@ class LoginFragment : Fragment() {
         val email = binding.etEmail.text.toString()
         val password = binding.etPassword.text.toString()
 
-        if(email == getEmail && password.equals(getPassword)) {
+        if(email == getEmail && password == getPassword) {
             findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
         }else {
             firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {

@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.example.challange6.R
 import com.example.challange6.databinding.FragmentDetailBinding
 import com.example.challange6.model.Movie
 import com.example.challange6.room.FavoritDao
@@ -83,7 +82,7 @@ class DetailFragment : Fragment() {
 
                 activity?.runOnUiThread {
                     if (favDetail != 0.toLong()){
-                        Toast.makeText(context, "Add to Favorite Success", Toast.LENGTH_LONG).show()
+                        Toast.makeText(context, "Add to Favorite", Toast.LENGTH_LONG).show()
                         var check = false
                         check = !check
                         binding.addFav.isChecked = check

@@ -10,6 +10,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
+@Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused")
 @Module
 @InstallIn(SingletonComponent::class)
 class HiltModule {

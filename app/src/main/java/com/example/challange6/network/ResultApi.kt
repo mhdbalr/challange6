@@ -1,3 +1,5 @@
+@file:Suppress("unused")
+
 package com.example.challange6.network
 
 import com.example.challange6.model.ResponseMovie

@@ -3,24 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.LoginFragment">
+    tools:context=".fragment.LoginFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="423dp"
-        android:layout_height="283dp"
-        android:src="@drawable/top_background"
+        android:layout_width="408dp"
+        android:layout_height="324dp"
+        android:src="@drawable/bgr4"
         app:layout_constraintBaseline_toBottomOf="@+id/etSatu"
         app:layout_constraintBottom_toTopOf="@+id/etSatu"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/etSatu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login"
+        android:textColor="@color/BLUE"
         android:textSize="30sp"
         android:textStyle="bold"
         android:layout_marginLeft="20dp"
@@ -77,11 +78,12 @@
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sign_in"
+        android:text="@string/SIGNIN"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:textSize="25sp"
+        android:textColor="@color/BLUE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,19 +91,21 @@
 
     <TextView
         android:id="@+id/btnSignUp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="187dp"
+        android:layout_height="29dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="0dp"
-        android:fontFamily="sans-serif-light"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
+        android:background="@color/BLUE"
         android:gravity="center_horizontal"
-        android:text="@string/don_t_have_an_account_yet"
-        android:textColor="@color/black"
+        android:text="SIGN UP"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignin" />
+        app:layout_constraintTop_toBottomOf="@+id/btnSignin"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

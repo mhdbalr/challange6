@@ -1,3 +1,5 @@
+@file:Suppress("unused", "unused", "unused")
+
 package com.example.challange6.viewmodel
 
 import android.annotation.SuppressLint
