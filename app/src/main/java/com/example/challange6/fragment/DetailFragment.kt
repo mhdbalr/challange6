@@ -68,7 +68,7 @@ class DetailFragment : Fragment() {
         Glide.with(view.context).load("https://image.tmdb.org/t/p/w780${imagepath}")
             .into(binding.imgMovie)
 
-        binding.addFav.setOnClickListener {
+        binding.imgFav.setOnClickListener {
             GlobalScope.async {
 
                 val getFavMov = arguments?.getParcelable<Movie>("data_movie") as Movie
@@ -85,7 +85,7 @@ class DetailFragment : Fragment() {
                         Toast.makeText(context, "Add to Favorite", Toast.LENGTH_LONG).show()
                         var check = false
                         check = !check
-                        binding.addFav.isChecked = check
+                        binding.imgFav.isChecked = check
 
                     }else{
                         Toast.makeText(context, "Add to Favorite Failed", Toast.LENGTH_LONG).show()
