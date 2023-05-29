@@ -16,9 +16,11 @@ import com.example.challange6.databinding.ItemFavoritBinding
 import com.example.challange6.model.Movie
 import com.example.challange6.room.FavoritDatabase
 import com.example.challange6.room.FavoritNote
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 
+@OptIn(DelicateCoroutinesApi::class)
 @Suppress("unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused", "unused",
     "unused", "RemoveRedundantQualifierName", "RemoveEmptyClassBody", "RemoveEmptyClassBody",
     "RemoveEmptyClassBody", "MemberVisibilityCanBePrivate", "MemberVisibilityCanBePrivate",
@@ -95,7 +97,7 @@ class FavoritAdapter(private var context : Context, private var listFav: List <F
     override fun getItemCount(): Int {
         return listFav.size
     }
-    fun setMovie(itemMovie: ArrayList<FavNote>) {
+    fun setMovie(itemMovie: ArrayList<FavoritNote>) {
         this.listFav = itemMovie
     }
 

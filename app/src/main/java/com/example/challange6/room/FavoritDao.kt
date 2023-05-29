@@ -1,9 +1,11 @@
 package com.example.challange6.room
 
+import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 
+@Dao
 interface FavoritDao {
     @Query("SELECT * FROM FavoritNote")
 fun getAllMovieFavorit() : List<FavoritNote>
