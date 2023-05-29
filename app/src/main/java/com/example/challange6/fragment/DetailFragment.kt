@@ -85,7 +85,7 @@ class DetailFragment : Fragment() {
                         Toast.makeText(context, "Add to Favorite", Toast.LENGTH_LONG).show()
                         var check = false
                         check = !check
-                        binding.imgFav.isChecked = check
+                        binding.imgFav.isClickable = check
 
                     }else{
                         Toast.makeText(context, "Add to Favorite Failed", Toast.LENGTH_LONG).show()
