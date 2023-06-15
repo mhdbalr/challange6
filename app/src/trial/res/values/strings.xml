@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">challange6</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wlc">Wellcome</string>
+    <string name="SIGNIN">Sign IN</string>
+    <string name="ful_name">Nama Lengkap</string>
+    <string name="tglhr">Tangal Lahir</string>
+    <string name="adres">Alamat</string>
+    <string name="profile">PROFILE</string>
+    <string name="username">Username</string>
+    <string name="update">Update</string>
+    <string name="logout">Logout</string>
+    <string name="psw">Password</string>
+    <string name="SIGNUPPP">SIGN UP</string>
+</resources>

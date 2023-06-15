@@ -23,6 +23,21 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    flavorDimensions("Challange")
+    productFlavors{
+
+        trial{
+            applicationIdSuffix ".trial"
+            dimension "Challange"
+        }
+
+        membership{
+            applicationIdSuffix ".membership"
+            dimension "Challange"
+        }
+
+    }
+
     buildTypes {
         release {
             minifyEnabled false
