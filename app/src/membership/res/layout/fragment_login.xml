@@ -4,34 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.LoginFragment"
+    android:background="@drawable/img_3"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="408dp"
-        android:layout_height="324dp"
-        android:src="@drawable/bgr4"
-        app:layout_constraintBaseline_toBottomOf="@+id/etSatu"
-        app:layout_constraintBottom_toTopOf="@+id/etSatu"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/etSatu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textColor="@color/BLUE"
-        android:textSize="30sp"
-        android:textStyle="bold"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:text="Login"
+        android:textColor="@color/ijo"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.241" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textfieldUsername"
@@ -83,7 +75,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:textSize="25sp"
-        android:textColor="@color/BLUE"
+        android:textColor="@color/ijo"
+        android:background="@color/ijo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +89,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="120dp"
         android:layout_marginRight="120dp"
-        android:background="@color/BLUE"
+        android:background="@color/ijo"
         android:gravity="center_horizontal"
         android:text="SIGN UP"
         android:textColor="@color/white"

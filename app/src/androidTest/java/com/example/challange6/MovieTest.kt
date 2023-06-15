@@ -2,7 +2,7 @@ package com.example.challange6
 
 import com.example.challange6.model.Movie
 import org.junit.After
-import org.junit.Assert
+import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 
@@ -13,10 +13,10 @@ class MovieTest {
     fun setUp() {
         // Persiapan sebelum setiap pengujian dilakukan
         val id = 1
-        val imagepath = "path/to/image"
-        val title = "Movie Title"
-        val date = "2023-05-31"
-        val overview = "This is a movie overview"
+        val imagepath = "path/image/to"
+        val title = "Movie Name"
+        val date = "2023-09-16"
+        val overview = "The movie overview"
 
         // Membuat objek DetailMovieTop dengan nilai-nilai yang diberikan
         movie = Movie(id, title, overview, date, imagepath)
@@ -31,16 +31,16 @@ class MovieTest {
     fun testMovie() {
         // Persiapan data yang diperlukan untuk pengujian
         val id = 1
-        val imagepath = "path/to/image"
-        val title = "Movie Title"
-        val date = "2023-05-31"
-        val overview = "This is a movie overview"
+        val imagepath = "path/image/to"
+        val title = "Movie Name"
+        val date = "2023-09-16"
+        val overview = "The movie overview"
 
         // Memeriksa apakah nilai-nilai objek DetailMovieTop sesuai dengan yang diharapkan
-        Assert.assertEquals(id, movie.id)
-        Assert.assertEquals(title, movie.title)
-        Assert.assertEquals(date, movie.releaseDate)
-        Assert.assertEquals(overview, movie.overview)
-        Assert.assertEquals(imagepath, movie.imagePath)
+        assertEquals(id, movie.id)
+        assertEquals(title, movie.title)
+        assertEquals(date, movie.releaseDate)
+        assertEquals(overview, movie.overview)
+        assertEquals(imagepath, movie.imagePath)
     }
 }

@@ -9,7 +9,7 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/film"
+        android:src="@drawable/img_6"
         tools:ignore="ContentDescription,MissingConstraints"
         />
 

@@ -27,7 +27,7 @@
         android:id="@+id/imageView"
         android:layout_width="447dp"
         android:layout_height="280dp"
-        android:src="@drawable/bgr4"
+        android:src="@drawable/img_5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"

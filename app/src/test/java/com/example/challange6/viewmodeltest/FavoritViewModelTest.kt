@@ -1,4 +1,4 @@
-package com.example.challange6
+package com.example.challange6.viewmodeltest
 
 import com.example.challange6.room.FavoritDao
 import io.mockk.mockk
